@@ -64,7 +64,7 @@
 
 
 
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: "class",
@@ -76,18 +76,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        light: {
-          bg: "#F9FAFB",
-          primary: "#3B82F6",
-          accent: "#10B981",
-          text: "#111827",
-        },
-        dark: {
-          bg: "#1F2937",
-          primary: "#60A5FA",
-          accent: "#34D399",
-          text: "#F9FAFB",
-        },
+        border: "hsl(var(--border))", // ✅ fix for border-border
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: "hsl(var(--primary))",
+        secondary: "hsl(var(--secondary))",
+        muted: "hsl(var(--muted))",
+        accent: "hsl(var(--accent))",
+        destructive: "hsl(var(--destructive))",
+        card: "hsl(var(--card))",
+        popover: "hsl(var(--popover))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+      },
+      borderColor: {
+        DEFAULT: "hsl(var(--border))", // ✅ needed for border utilities
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -118,6 +121,6 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
 
-export default config
+export default config;
