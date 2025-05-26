@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "EduQuiz - Modern Quiz Platform",
   description: "Create and take quizzes with real-time features",
-    generator: 'v0.dev'
+    generator: 'edu-quiz'
 }
 
 export default function RootLayout({
